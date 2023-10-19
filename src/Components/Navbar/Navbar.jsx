@@ -60,9 +60,9 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
-            </ul>
+            </ul>g
           </div>
-          <a className="normal-case text-xl">SM Health</a>
+          <a className="normal-case text-xl">Brand Car</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
