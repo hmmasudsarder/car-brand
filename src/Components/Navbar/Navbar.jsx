@@ -15,17 +15,17 @@ const Navbar = () => {
           <NavLink to="/">Home</NavLink>
         </li>
         <li className="font-semibold uppercase">
-          <NavLink to="/contact">contact</NavLink>
+          <NavLink to="/add">Add Products</NavLink>
         </li>
         <li className="font-semibold uppercase">
-          <NavLink to="/special">Why Our</NavLink>
+          <NavLink to="/my">My Cart</NavLink>
         </li>
         <li className="font-semibold uppercase">
           <NavLink to="/login">login</NavLink>
         </li>
-        <li className="font-semibold uppercase">
+        {/* <li className="font-semibold uppercase">
           <NavLink to="/register">Register</NavLink>
-        </li>
+        </li> */}
       </>
     );
     const handleSignOut = () => {
@@ -60,7 +60,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
-            </ul>g
+            </ul>
           </div>
           <a className="normal-case text-xl">Brand Car</a>
         </div>

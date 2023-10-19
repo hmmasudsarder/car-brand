@@ -4,6 +4,8 @@ import Home from "../Pages/Home";
 import ProductAdded from "../Pages/ProductAdded/ProductAdded";
 import Login from "../SharedComponents/Login";
 import Register from "../SharedComponents/Register";
+import PrivateRoute from "../AuthProvider/PrivateRoute";
+import MyCart from "../Pages/MyCart/MyCart";
 
 
 const Router = createBrowserRouter([
@@ -17,7 +19,11 @@ const Router = createBrowserRouter([
         },
         {
             path: '/add',
-            element: <ProductAdded></ProductAdded>
+            element: <PrivateRoute><ProductAdded/></PrivateRoute>
+        },
+        {
+            path: '/my',
+            element: <PrivateRoute><MyCart/></PrivateRoute>
         },
         {
           path: '/login',

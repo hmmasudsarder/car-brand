@@ -15,6 +15,8 @@
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.2",
+    "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.17.0",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.7.32"
