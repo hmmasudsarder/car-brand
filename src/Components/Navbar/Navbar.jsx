@@ -6,9 +6,9 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const {user, userLogOut} = useContext(AuthContext);
-    const emailUs = (user?.email    )
+    const emailUs = (user?.email    );
     const userName = (user?.displayName);
-    const displayPic = (user?.photoURL)
+    const displayPic = (user?.photoURL);
     const navLinks = (
       <>
         <li className="font-semibold uppercase">
@@ -70,8 +70,10 @@ const Navbar = () => {
         <div className="navbar-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
+              
               {
                 user?.photoURL ? <img src={displayPic} /> :  <img src={disPic}/>
+                
               }
               
             </div>
