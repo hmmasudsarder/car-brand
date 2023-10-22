@@ -1,18 +1,26 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import ShowCard from "./ShowCard";
+import { useState } from "react";
+import Advertising from "../../Components/Navbar/Advertising";
 
 const ShowBrandDetails = () => {
-  const categories = useLoaderData();
-  // const { image, name, price, rating, category } = categories;
+  const LoadedCategories = useLoaderData();
+  const [categories, setCategories] = useState(LoadedCategories);
   // console.log(name);
 
   return (
     <div>
       <Navbar></Navbar>
+      <Advertising></Advertising>
       <div className="grid grid-cols-1 md:grid-cols-2 m-68">
       {
-        categories.map(category => <ShowCard key={category._id} category={category} ></ShowCard>)
+        categories.map(category => 
+        <ShowCard key={category._id}
+           category={category} 
+           categories={categories} 
+           setCategories={setCategories} 
+           ></ShowCard>)
       }
       </div>
       {/* <div className="card w-96 bg-base-100 shadow-xl">

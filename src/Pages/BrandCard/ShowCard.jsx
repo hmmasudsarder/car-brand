@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import Advertising from "../../Components/Navbar/Advertising";
 import { Link } from "react-router-dom";
 
-const ShowCard = ({ category }) => {
+const ShowCard = ({ category, categories, setCategories}) => {
   const { _id, photo, name, price, rating, category: cat } = category;
   const handleDelete = _id => {
     console.log(_id)
@@ -28,6 +28,8 @@ const ShowCard = ({ category }) => {
                     'Your Product has been deleted.',
                     'success'
                   )
+                  const remaining = categories.filter(cate => cate._id !== _id)
+                  setCategories(remaining)
             }
             
         })
@@ -38,9 +40,7 @@ const ShowCard = ({ category }) => {
 //   console.log(cat);
   return (
     <div className="">
-      <div className="w-4/4 mx-auto">
-        <Advertising></Advertising>
-      </div>
+    
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
           <img
