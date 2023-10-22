@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import Navbar from "../../Components/Navbar/Navbar";
 
 const ProductAdded = () => {
-  const handleCoffeeAdd = (e) => {
+  const handleProductAdd = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -41,7 +41,7 @@ const ProductAdded = () => {
         <h3 className="text-3xl font-bold text-center mb-2">
           Add A Brand Item
         </h3>
-        <form onSubmit={handleCoffeeAdd}>
+        <form onSubmit={handleProductAdd}>
           <div className="md:flex mb-8 gap-5 ">
             <div className="form-control md:w-1/2">
               <label className="label">

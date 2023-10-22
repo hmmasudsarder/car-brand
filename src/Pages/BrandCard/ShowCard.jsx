@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import Advertising from "../../Components/Navbar/Advertising";
+import { Link } from "react-router-dom";
 
 const ShowCard = ({ category }) => {
   const { _id, photo, name, price, rating, category: cat } = category;
@@ -55,7 +56,9 @@ const ShowCard = ({ category }) => {
          
           <div className="flex item-center justify-between ">
           <div className="">
+            <Link to={`/updateProduct/${_id}`}>
             <button className="btn  bg-accent">Update</button>
+            </Link>
           </div>
           <div className="">
             <button onClick={()=> handleDelete(_id)} className="btn btn-secondary">Delete</button>
