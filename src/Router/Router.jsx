@@ -9,6 +9,7 @@ import MyCart from "../Pages/MyCart/MyCart";
 import Error from "../SharedComponents/Error";
 import ShowBrandDetails from "../Pages/BrandCard/ShowBrandDetails";
 import ProductUpdate from "../Pages/ProductAdded/ProductUpdated/ProductUpdate";
+import ShowDetailsButton from "../Pages/BrandCard/ShowDetailsButton";
 
 
 const Router = createBrowserRouter([
@@ -25,6 +26,11 @@ const Router = createBrowserRouter([
         {
             path: '/add',
             element: <PrivateRoute><ProductAdded/></PrivateRoute>
+        },
+        {
+          path: '/showDetails/:id',
+          element:<ShowDetailsButton></ShowDetailsButton>,
+          loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
         },
         {
             path: '/my',

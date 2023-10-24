@@ -17,7 +17,6 @@ const Advertising = () => {
         autoplay={true}
        pagination={{ clickable: true }}
        className="swiper-slide" data-swiper-autoplay="2000"
-       
       >
          <SwiperSlide>
             <img src={'https://i.ibb.co/9hH9SjT/bmw-m8-competition-individual-rosso-corsa-stage-teaser-02.png'} alt="" style={{width: "100%", height: "100vh"}} />
@@ -28,11 +27,6 @@ const Advertising = () => {
         <SwiperSlide>
             <img src={'https://i.ibb.co/0JXKhtX/81ae56354cedeff9c8a528ac419af4d8.jpg'} alt="" style={{width: "100%", height: "100vh"}}/>
         </SwiperSlide>
-        <SwiperSlide>
-            <img src="https://i.ibb.co/KFWFsbk/47eb7001aa5a69cf56e22798fd7da9aa.png" alt="" style={{width: "100%", height: "100vh"}}/>
-        </SwiperSlide>
-        
-        ...
       </Swiper>
     </div>
     );

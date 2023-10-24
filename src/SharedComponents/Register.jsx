@@ -24,11 +24,8 @@ const Register = () => {
         }
         createUser(email, password)
         .then(res => {
-          navigate('/')
-          Swal("Good job!", "You Register SuccessFully!", "success")
-            console.log(res)
-            const user = {email};
-            fetch('http://localhost:5000/user',{
+          const user = {email};
+            fetch('http://localhost:5000/myCart',{
               method: "POST",
               headers: {
                 'content-type': 'application/json'
@@ -40,6 +37,10 @@ const Register = () => {
               
               console.log(data)
             })
+          navigate('/')
+          Swal("Good job!", "You Register SuccessFully!", "success")
+            console.log(res.user)
+            
         })
         .catch(error => {
           setError(error.message)

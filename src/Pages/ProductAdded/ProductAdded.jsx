@@ -1,7 +1,9 @@
 import Swal from "sweetalert2";
 import Navbar from "../../Components/Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const ProductAdded = () => {
+  const navigate = useNavigate();
   const handleProductAdd = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -22,6 +24,7 @@ const ProductAdded = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        navigate('/')
         console.log(data);
         if (data.acknowledged) {
           Swal.fire({

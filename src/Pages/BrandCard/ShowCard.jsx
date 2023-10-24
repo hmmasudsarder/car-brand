@@ -1,41 +1,9 @@
-import Swal from "sweetalert2";
-import Advertising from "../../Components/Navbar/Advertising";
+
 import { Link } from "react-router-dom";
 
-const ShowCard = ({ category, categories, setCategories}) => {
+const ShowCard = ({ category}) => {
   const { _id, photo, name, price, rating, category: cat } = category;
-  const handleDelete = _id => {
-    console.log(_id)
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-        fetch(`http://localhost:5000/product/${_id}`,{
-            method: 'DELETE'
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if(data.deletedCount > 0){
-                Swal.fire(
-                    'Deleted!',
-                    'Your Product has been deleted.',
-                    'success'
-                  )
-                  const remaining = categories.filter(cate => cate._id !== _id)
-                  setCategories(remaining)
-            }
-            
-        })
-        }
-      })
-  }
+  
 //   console.log(category);
 //   console.log(cat);
   return (
@@ -61,7 +29,9 @@ const ShowCard = ({ category, categories, setCategories}) => {
             </Link>
           </div>
           <div className="">
-            <button onClick={()=> handleDelete(_id)} className="btn btn-secondary">Delete</button>
+            <Link to={`/showDetails/${_id}`}>
+            <button className="btn btn-secondary">Details</button>
+            </Link>
           </div>
           </div>
         </div>
