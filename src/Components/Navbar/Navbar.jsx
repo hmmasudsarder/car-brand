@@ -18,7 +18,7 @@ const Navbar = () => {
           <NavLink to="/add">Add Products</NavLink>
         </li>
         <li className="font-semibold uppercase">
-          <NavLink to="/my">My Cart</NavLink>
+          <NavLink to={`/my/${user?.email}`}>My Cart</NavLink>
         </li>
         <li className="font-semibold uppercase">
           <NavLink to="/login">login</NavLink>

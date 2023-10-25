@@ -102,7 +102,7 @@ const ProductAdded = () => {
                   <option value="bmw">BMW</option>
                   <option value="audi">AUDI</option>
                   <option value="rangerover">Range Rover</option>
-                  <option value="ferrari">FERRARI</option>
+                  <option value="tata">TATA</option>
                 </select>
               </label>
             </div>

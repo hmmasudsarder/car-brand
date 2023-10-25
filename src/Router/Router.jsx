@@ -33,9 +33,9 @@ const Router = createBrowserRouter([
           loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
         },
         {
-            path: '/my',
-            element: <PrivateRoute><MyCart/></PrivateRoute>,
-            loader:({params}) => fetch(`http://localhost:5000/users/${params.email}`)
+            path: '/my/:email',
+            element: <MyCart/>,
+            loader:({params}) => fetch(`http://localhost:5000/user/${params.email}`)
         },
         {
           path: '/showBrand/:category',

@@ -2,16 +2,17 @@
 import { Link } from "react-router-dom";
 
 const ShowCard = ({ category}) => {
+  // console.log(category)
   const { _id, photo, name, price, rating, category: cat } = category;
   
 //   console.log(category);
 //   console.log(cat);
   return (
-    <div className="">
+    <div className="w-[70vh]">
     
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card card-compact bg-base-100 shadow-xl">
         <figure>
-          <img
+          <img className=""
             src={photo}
             alt="Shoes"
           />
