@@ -25,7 +25,7 @@ const Register = () => {
         createUser(email, password)
         .then(res => {
           const user = {email};
-            fetch('http://localhost:5000/myCart',{
+            fetch('https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/myCart',{
               method: "POST",
               headers: {
                 'content-type': 'application/json'

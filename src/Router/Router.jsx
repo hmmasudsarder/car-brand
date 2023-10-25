@@ -21,7 +21,7 @@ const Router = createBrowserRouter([
         {
             path: '/',
             element:<Home></Home>,
-            loader: () => fetch('http://localhost:5000/brand')
+            loader: () => fetch('https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/brand')
         },
         {
             path: '/add',
@@ -30,22 +30,22 @@ const Router = createBrowserRouter([
         {
           path: '/showDetails/:id',
           element:<ShowDetailsButton></ShowDetailsButton>,
-          loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+          loader: ({params}) => fetch(`https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/details/${params.id}`)
         },
         {
             path: '/my/:email',
             element: <PrivateRoute><MyCart/></PrivateRoute>,
-            loader:({params}) => fetch(`http://localhost:5000/user/${params.email}`)
+            loader:({params}) => fetch(`https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/user/${params.email}`)
         },
         {
           path: '/showBrand/:category',
           element:<ShowBrandDetails></ShowBrandDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/product/${params.category}`)
+          loader: ({params}) => fetch(`https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/product/${params.category}`)
         },
         {
           path:'/updateProduct/:id',
           element:<ProductUpdate></ProductUpdate>,
-          loader: ({params}) => fetch(`http://localhost:5000/cardUpdate/${params.id}`)
+          loader: ({params}) => fetch(`https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/cardUpdate/${params.id}`)
         },
         {
           path: '/login',

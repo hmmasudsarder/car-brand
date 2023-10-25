@@ -15,7 +15,7 @@ const ProductAdded = () => {
     const photo = form.photo.value;
     const newProduct = { name, price, rating, category, description, photo };
     console.log(newProduct);
-    fetch("http://localhost:5000/product", {
+    fetch("https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

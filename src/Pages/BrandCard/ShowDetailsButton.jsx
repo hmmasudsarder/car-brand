@@ -9,7 +9,7 @@ const ShowDetailsButton = () => {
   const { photo, name, price, rating, description } = details;
   const {user} = useContext(AuthContext);
  const handleAddToCart = () => {
-  fetch('http://localhost:5000/addToCart', {
+  fetch('https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/addToCart', {
     method: 'POST',
     headers:{
       'content-type': 'application/json'

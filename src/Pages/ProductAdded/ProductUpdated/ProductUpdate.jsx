@@ -16,7 +16,7 @@ const ProductUpdate = () => {
     const photo = form.photo.value;
     const updateProduct = { name, price, rating, category, description, photo };
     console.log(updateProduct);
-    fetch(`http://localhost:5000/cardUpdate/${_id}`, {
+    fetch(`https://brand-shop-server-75fl384hx-masuds-projects-c3df1a1c.vercel.app/cardUpdate/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
