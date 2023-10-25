@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const ShowDetailsButton = () => {
   const details = useLoaderData();
@@ -19,6 +20,12 @@ const ShowDetailsButton = () => {
   .then(res => res.json())
   .then(data => {
     console.log(data)
+    Swal.fire({
+      icon: 'success',
+      title: 'Good JOB',
+      text: 'Successfully Your Cart Added!',
+      
+    })
   })
  }
   return (
