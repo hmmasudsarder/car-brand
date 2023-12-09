@@ -41,7 +41,7 @@ const ShowDetailsButton = () => {
           <h2 className="card-title">Price:$ {price}</h2>
           <h2 className="card-title">Rating: {rating}</h2>
           <div className="flex item-center justify-between ">
-            <Link to='/' onClick={() => handleAddToCart()} className="mx-auto">
+            <Link  onClick={() => handleAddToCart()} className="mx-auto">
               <button className="btn btn-outline btn-accent">Add To Cart</button>
             </Link>
           </div>
